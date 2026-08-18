@@ -1,0 +1,139 @@
+{
+  "_readme": "Durable record of human feedback about specific pages. This is the persistent-memory substitute for a live Slack connector: feedback still arrives manually, but it's entered once and the pipeline re-checks every open item on every run, re-flagging anything not yet resolved. When a fix ships, set 'resolved' to true and record 'resolved_date'. Add new entries whenever a stakeholder flags something.",
+  "_capture_the_problem_not_the_solution": "Record the PROBLEM a stakeholder identified, not their prescribed fix, when the fix is outside their expertise. Example: a developer saying 'use red and green X' is really reporting 'the table contrast is too weak to read at a glance' — capture that, and leave the visual solution to a designer. Same for editorial or strategic solutions. This keeps the pipeline from encoding one person's snapshot prescription as a durable rule, and prevents acting on advice that would make a page worse.",
+  "_no_frozen_judgment_lists": "Do not encode a fixed list of 'best' features/competitors/wording as pipeline rules. Competitive and market judgment goes stale fast; freezing it guarantees the pipeline is wrong after the next release. Encode the SHAPE of the problem (e.g. 'comparison tables should lead with platform breadth') and leave specific selections to the human-owned must-mention/ledger files.",
+  "_fields": {
+    "id": "stable unique id",
+    "page": "URL",
+    "source": "who/where the feedback came from",
+    "date": "YYYY-MM-DD feedback received",
+    "axis": "correctness | tone | positioning | assets",
+    "issue": "what's wrong",
+    "expected": "what it should be instead",
+    "severity": "high | medium | low",
+    "resolved": "boolean — pipeline keeps re-flagging until true",
+    "resolved_date": "YYYY-MM-DD or null"
+  },
+  "corrections": [
+    {
+      "id": "autofix-fabricated-package-claim",
+      "page": "https://www.aikido.dev/code/autofix",
+      "source": "CEO (willem) via Slack thread",
+      "date": "2026-08-10",
+      "axis": "correctness",
+      "issue": "'Seamlessly adding a package to your project? We got you covered' describes a capability Aikido does not have.",
+      "expected": "Remove the claim. Aikido does not add/install packages as a fix.",
+      "severity": "high",
+      "resolved": false,
+      "resolved_date": null
+    },
+    {
+      "id": "autofix-data-backed-jargon",
+      "page": "https://www.aikido.dev/code/autofix",
+      "source": "CEO (willem) via Slack thread",
+      "date": "2026-08-10",
+      "axis": "tone",
+      "issue": "'Instant data-backed fixes' — meaningless jargon, no clear mechanism referent ('=> that's nonsense').",
+      "expected": "Rewrite the headline to say what the fixes actually are (rigorously tested, LLM-generated, one-click PR).",
+      "severity": "medium",
+      "resolved": false,
+      "resolved_date": null
+    },
+    {
+      "id": "autofix-missing-libraries",
+      "page": "https://www.aikido.dev/code/autofix",
+      "source": "CEO (willem) via Slack thread + content brief",
+      "date": "2026-08-10",
+      "axis": "positioning",
+      "issue": "Page does not mention Aikido Libraries at all ('it doesn't even have the word libraries in it'); missing the designated core differentiator for CVE autofix.",
+      "expected": "Land the 3-part story: CVE autofix (fast, never breaks build via Libraries, agentic, custom instructions), SAST (matches your style, guided), container (reads Dockerfile, multiple options, hardened images).",
+      "severity": "high",
+      "resolved": false,
+      "resolved_date": null
+    },
+    {
+      "id": "autofix-page-off-topic-and-assets",
+      "page": "https://www.aikido.dev/code/autofix",
+      "source": "CEO (willem) via Slack thread",
+      "date": "2026-08-10",
+      "axis": "assets",
+      "issue": "Page drifts into unrelated content (SBOM Export screenshot mid-flow) and uses pixelated/low-res product screenshots.",
+      "expected": "Remove off-topic SBOM content from the autofix narrative; replace low-res screenshots.",
+      "severity": "medium",
+      "resolved": false,
+      "resolved_date": null
+    },
+    {
+      "id": "coderabbit-tagline-positioning",
+      "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
+      "source": "CEO (willem) via Slack thread",
+      "date": "2026-08-13",
+      "axis": "positioning",
+      "issue": "H1 'AI code review that goes beyond code quality' concedes the category frame to CodeRabbit (positions Aikido as CodeRabbit-plus).",
+      "expected": "New tagline centered on developer experience. CEO's suggestion: 'Code review that doesn't make you chase down rabbit holes' (plays on CodeRabbit's name). Owner: Madeline.",
+      "severity": "high",
+      "resolved": false,
+      "resolved_date": null
+    },
+    {
+      "id": "coderabbit-page-structure",
+      "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
+      "source": "CEO (willem) via Slack thread",
+      "date": "2026-08-13",
+      "axis": "positioning",
+      "issue": "Page emphasis/order is wrong.",
+      "expected": "Order should be: (1) new tagline, (2) entire-platform vs single-feature argument, (3) pricing comparison.",
+      "severity": "medium",
+      "resolved": false,
+      "resolved_date": null
+    },
+    {
+      "id": "coderabbit-table-false-competitor-claims",
+      "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
+      "source": "CEO (willem) via Slack thread",
+      "date": "2026-08-13",
+      "axis": "correctness",
+      "issue": "Comparison table 'features picked are very bad' — CEO wants the table to feature capabilities where CodeRabbit genuinely has nothing, and warns some current framing may misrepresent competitor. Must verify each competitor row against CodeRabbit's actual capabilities.",
+      "expected": "Feature the flat-win capabilities: malware protection, CVE detection, container image scanning, CSPM, pentesting, CVE exploitability analysis, local scanning without sharing code. Verify each 'CodeRabbit does not' mark before publishing.",
+      "severity": "high",
+      "resolved": false,
+      "resolved_date": null
+    },
+    {
+      "id": "coderabbit-hardened-libraries-scope",
+      "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
+      "source": "CEO (willem) via Slack thread",
+      "date": "2026-08-13",
+      "axis": "positioning",
+      "issue": "'Hardened libraries: totally not the comparison page to bring that up.' Confirmed (2026-08-14): means hardened libraries is too niche for CodeRabbit's audience for this table — the capability is real, just wrong context here.",
+      "expected": "Remove hardened-libraries row from the CodeRabbit comparison (still valid elsewhere).",
+      "severity": "medium",
+      "resolved": false,
+      "resolved_date": null
+    },
+    {
+      "id": "coderabbit-wrong-screenshot",
+      "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
+      "source": "CEO (willem) via Slack thread",
+      "date": "2026-08-13",
+      "axis": "assets",
+      "issue": "Product screenshot shows the Code Quality view; wrong for a page selling Deep PR Review / AI Code Analysis against CodeRabbit.",
+      "expected": "Replace with a Deep PR Review / AI Code Analysis screenshot.",
+      "severity": "medium",
+      "resolved": false,
+      "resolved_date": null
+    },
+    {
+      "id": "coderabbit-table-visual-contrast",
+      "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
+      "source": "CEO (willem) via Slack thread",
+      "date": "2026-08-13",
+      "axis": "assets",
+      "issue": "PROBLEM (not solution): the comparison table's contrast is too weak — subtle checks and grey crosses don't let a reader see the capability gap at a glance.",
+      "expected": "Increase visual contrast between Aikido's coverage and the competitor's gaps so the difference reads instantly. Solution is a DESIGNER's call. NOTE: the CEO suggested literal red/green, but he's a developer, not a designer — red/green would look poor on this page and clash with the brand. Capture the problem, leave the fix to design.",
+      "severity": "low",
+      "resolved": false,
+      "resolved_date": null
+    }
+  ]
+}
