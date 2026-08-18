@@ -114,18 +114,39 @@ Owner: _TBD_
 **How to maintain:** record competitor capabilities only from the competitor's own current docs/site (dated), not memory or inference. Competitors ship fast — mark a `checked` date and re-verify. When unsure, the entry is `UNVERIFIED`, and any table row depending on it must be flagged, not published.
 
 ## CodeRabbit
-Comparison page: /comparison/aikido-vs-coderabbit · Last verified: _TBD (needs a pass against coderabbit.ai)_
+Comparison page: /comparison/aikido-vs-coderabbit · Last verified: **2026-08-18** against docs.coderabbit.ai
+Sources read: `/tools/list`, `/security-agent`, `/self-hosted/overview`
 
-**Executive feedback flat wins (Aikido does, CodeRabbit does NOT) — VERIFY each against CodeRabbit's site before publishing:**
-- Malware protection — _UNVERIFIED_
-- CVE detection — _UNVERIFIED_
-- Container image scanning — _UNVERIFIED_
-- Cloud misconfiguration / CSPM — _UNVERIFIED_
-- Pentesting — _UNVERIFIED_
-- CVE exploitability analysis — _UNVERIFIED_
-- Local security scanning without sharing code — _UNVERIFIED_
+**CEO-asserted flat wins, checked 2026-08-18. Three do not hold.**
+- Malware protection — `CONFIRMED GAP` Their tool catalogue covers secrets (Betterleaks, TruffleHog), PII
+  (Presidio), agent skills (SkillSpector), dependencies (OSV-Scanner) and IaC. No malicious-package
+  detection anywhere in `/tools/list`. Safe to claim.
+- Pentesting / AI Pentest — `CONFIRMED GAP` Nothing in the docs. Safe to claim.
+- CVE detection — `CONTRADICTED, DO NOT PUBLISH` OSV-Scanner is in their default-on multipurpose tool
+  set ("Package Version Security", `/tools/list`), and Security Agent has a Dependencies capability:
+  "Find known vulnerabilities in supported manifests and lockfiles", with SARIF/CSV/JSON export and
+  Fix with AI.
+- CVE exploitability analysis — `CONTRADICTED, DO NOT PUBLISH` `/security-agent` has a section headed
+  "Reachability and exploitability" with a severity-adjustment matrix, and findings carry
+  "Reachability, exploitability, and a reachability call stack when available". This is the claim
+  stated in their own words.
+- Local security scanning without sharing code — `CONTESTED` Self-hosted CodeRabbit exists (Enterprise,
+  500+ seats): "code and pull request content never leave your environment". Their own caveat is that
+  the agent "sends review prompts, source code, and related data to your configured large language
+  model provider", though BYO-model in the customer's own account is offered. A flat cross is not
+  defensible; a qualified claim about the cloud product might be.
+- Container image scanning — `DEFENSIBLE, NARROW` Trivy and Hadolint run on Dockerfiles and IaC, and
+  AI Deep Scan covers "Dockerfile, Containerfile" misconfigurations. No scanning of built image layers
+  or installed packages. Relabel the row to say built images, or expect a rebuttal.
+- Cloud misconfiguration / CSPM — `DEFENSIBLE, NARROW` Checkov and Trivy cover Terraform, Kubernetes,
+  Helm, CloudFormation, ARM and Bicep misconfigurations in code. No connection to a live cloud account.
+  As worded, "cloud misconfiguration" is contradicted; "live cloud posture" is not.
 
-(Source: Executive leadership Slack, 2026-08-13. These are the capabilities executive leadership wants the comparison table built around. They are asserted, not yet verified against CodeRabbit's documentation — do not publish a "CodeRabbit doesn't do this" mark until each is confirmed.)
+**Qualifier that applies to the two contradicted rows:** Security Agent is a paid add-on in open beta,
+outside Pro/Pro+/Enterprise, and AI Deep Scan is separately metered. That is a fair thing to say. It
+does not make "they do not do this" true.
+
+(Source: CEO Slack, 2026-08-13. These are the capabilities the CEO wants the comparison table built around. They are asserted, not yet verified against CodeRabbit's documentation — do not publish a "CodeRabbit doesn't do this" mark until each is confirmed.)
 
 **Scope guidance from leadership:**
 - Do NOT feature "hardened libraries" on the CodeRabbit comparison (too niche for that audience — interpretation unconfirmed, see corrections-ledger `coderabbit-hardened-libraries-scope`).
