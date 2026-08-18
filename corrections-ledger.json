@@ -72,8 +72,8 @@
       "issue": "H1 'AI code review that goes beyond code quality' concedes the category frame to CodeRabbit (positions Aikido as CodeRabbit-plus).",
       "expected": "New tagline centered on developer experience. Executive suggestion: 'Code review that doesn't make you chase down rabbit holes' (plays on CodeRabbit's name). Owner: Marketing leadership.",
       "severity": "high",
-      "resolved": false,
-      "resolved_date": null
+      "resolved": true,
+      "resolved_date": "2026-08-18"
     },
     {
       "id": "coderabbit-page-structure",
@@ -84,8 +84,8 @@
       "issue": "Page emphasis/order is wrong.",
       "expected": "Order should be: (1) new tagline, (2) entire-platform vs single-feature argument, (3) pricing comparison.",
       "severity": "medium",
-      "resolved": false,
-      "resolved_date": null
+      "resolved": true,
+      "resolved_date": "2026-08-18"
     },
     {
       "id": "coderabbit-table-false-competitor-claims",
@@ -96,8 +96,8 @@
       "issue": "Comparison table 'features picked are very bad' — executive leadership wants the table to feature capabilities where CodeRabbit genuinely has nothing, and warns some current framing may misrepresent competitor. Must verify each competitor row against CodeRabbit's actual capabilities.",
       "expected": "Feature the flat-win capabilities: malware protection, CVE detection, container image scanning, CSPM, pentesting, CVE exploitability analysis, local scanning without sharing code. Verify each 'CodeRabbit does not' mark before publishing.",
       "severity": "high",
-      "resolved": false,
-      "resolved_date": null
+      "resolved": true,
+      "resolved_date": "2026-08-18"
     },
     {
       "id": "coderabbit-hardened-libraries-scope",
@@ -108,8 +108,8 @@
       "issue": "'Hardened libraries: totally not the comparison page to bring that up.' Confirmed (2026-08-14): means hardened libraries is too niche for CodeRabbit's audience for this table — the capability is real, just wrong context here.",
       "expected": "Remove hardened-libraries row from the CodeRabbit comparison (still valid elsewhere).",
       "severity": "medium",
-      "resolved": false,
-      "resolved_date": null
+      "resolved": true,
+      "resolved_date": "2026-08-18"
     },
     {
       "id": "coderabbit-wrong-screenshot",
@@ -120,8 +120,8 @@
       "issue": "Product screenshot shows the Code Quality view; wrong for a page selling Deep PR Review / AI Code Analysis against CodeRabbit.",
       "expected": "Replace with a Deep PR Review / AI Code Analysis screenshot.",
       "severity": "medium",
-      "resolved": false,
-      "resolved_date": null
+      "resolved": true,
+      "resolved_date": "2026-08-18"
     },
     {
       "id": "coderabbit-table-visual-contrast",
@@ -132,8 +132,8 @@
       "issue": "PROBLEM (not solution): the comparison table's contrast is too weak — subtle checks and grey crosses don't let a reader see the capability gap at a glance.",
       "expected": "Increase visual contrast between Aikido's coverage and the competitor's gaps so the difference reads instantly. Solution is a DESIGNER's call. NOTE: executive feedback suggested literal red/green, but this came from a developer perspective, not a design perspective — red/green would look poor on this page and clash with the brand. Capture the problem, leave the fix to design.",
       "severity": "low",
-      "resolved": false,
-      "resolved_date": null
+      "resolved": true,
+      "resolved_date": "2026-08-18"
     }
   ]
 }
