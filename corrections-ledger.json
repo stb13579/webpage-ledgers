@@ -1,7 +1,7 @@
 {
-  "_readme": "Durable record of human feedback about specific pages. This is the persistent-memory substitute for a live Slack connector: feedback still arrives manually, but it's entered once and [...]",
-  "_capture_the_problem_not_the_solution": "Record the PROBLEM a stakeholder identified, not their prescribed fix, when the fix is outside their expertise. Example: a developer saying 'use red and [...]",
-  "_no_frozen_judgment_lists": "Do not encode a fixed list of 'best' features/competitors/wording as pipeline rules. Competitive and market judgment goes stale fast; freezing it guarantees the pipe[...]",
+  "_readme": "Durable record of human feedback about specific pages. This is the persistent-memory substitute for a live Slack connector: feedback still arrives manually, but it's entered once and the pipeline re-checks every open item on every run, re-flagging anything not yet resolved. When a fix ships, set 'resolved' to true and record 'resolved_date'. Add new entries whenever a stakeholder flags something.",
+  "_capture_the_problem_not_the_solution": "Record the PROBLEM a stakeholder identified, not their prescribed fix, when the fix is outside their expertise. Example: a developer saying 'use red and green X' is really reporting 'the table contrast is too weak to read at a glance' — capture that, and leave the visual solution to a designer. Same for editorial or strategic solutions. This keeps the pipeline from encoding one person's snapshot prescription as a durable rule, and prevents acting on advice that would make a page worse.",
+  "_no_frozen_judgment_lists": "Do not encode a fixed list of 'best' features/competitors/wording as pipeline rules. Competitive and market judgment goes stale fast; freezing it guarantees the pipeline is wrong after the next release. Encode the SHAPE of the problem (e.g. 'comparison tables should lead with platform breadth') and leave specific selections to the human-owned must-mention/ledger files.",
   "_fields": {
     "id": "stable unique id",
     "page": "URL",
@@ -46,7 +46,7 @@
       "date": "2026-08-10",
       "axis": "positioning",
       "issue": "Page does not mention Aikido Libraries at all ('it doesn't even have the word libraries in it'); missing the designated core differentiator for CVE autofix.",
-      "expected": "Land the 3-part story: CVE autofix (fast, never breaks build via Libraries, agentic, custom instructions), SAST (matches your style, guided), container (reads Dockerfile, multip[...]",
+      "expected": "Land the 3-part story: CVE autofix (fast, never breaks build via Libraries, agentic, custom instructions), SAST (matches your style, guided), container (reads Dockerfile, multiple options, hardened images).",
       "severity": "high",
       "resolved": false,
       "resolved_date": null
@@ -93,8 +93,8 @@
       "source": "CEO (willem) via Slack thread",
       "date": "2026-08-13",
       "axis": "correctness",
-      "issue": "Comparison table 'features picked are very bad' — CEO wants the table to feature capabilities where CodeRabbit genuinely has nothing, and warns some current framing may misrepres[...]",
-      "expected": "Feature the flat-win capabilities: malware protection, CVE detection, container image scanning, CSPM, pentesting, CVE exploitability analysis, local scanning without sharing cod[...]",
+      "issue": "Comparison table 'features picked are very bad' — CEO wants the table to feature capabilities where CodeRabbit genuinely has nothing, and warns some current framing may misrepresent competitor. Must verify each competitor row against CodeRabbit's actual capabilities.",
+      "expected": "Feature the flat-win capabilities: malware protection, CVE detection, container image scanning, CSPM, pentesting, CVE exploitability analysis, local scanning without sharing code. Verify each 'CodeRabbit does not' mark before publishing.",
       "severity": "high",
       "resolved": false,
       "resolved_date": null
@@ -105,7 +105,7 @@
       "source": "CEO (willem) via Slack thread",
       "date": "2026-08-13",
       "axis": "positioning",
-      "issue": "'Hardened libraries: totally not the comparison page to bring that up.' Confirmed (2026-08-14): means hardened libraries is too niche for CodeRabbit's audience for this table — [...]",
+      "issue": "'Hardened libraries: totally not the comparison page to bring that up.' Confirmed (2026-08-14): means hardened libraries is too niche for CodeRabbit's audience for this table — the capability is real, just wrong context here.",
       "expected": "Remove hardened-libraries row from the CodeRabbit comparison (still valid elsewhere).",
       "severity": "medium",
       "resolved": false,
@@ -130,7 +130,7 @@
       "date": "2026-08-13",
       "axis": "assets",
       "issue": "PROBLEM (not solution): the comparison table's contrast is too weak — subtle checks and grey crosses don't let a reader see the capability gap at a glance.",
-      "expected": "Increase visual contrast between Aikido's coverage and the competitor's gaps so the difference reads instantly. Solution is a DESIGNER's call. NOTE: the CEO suggested literal r[...]",
+      "expected": "Increase visual contrast between Aikido's coverage and the competitor's gaps so the difference reads instantly. Solution is a DESIGNER's call. NOTE: the CEO suggested literal red/green, but he's a developer, not a designer — red/green would look poor on this page and clash with the brand. Capture the problem, leave the fix to design.",
       "severity": "low",
       "resolved": false,
       "resolved_date": null
