@@ -9,7 +9,7 @@ Human-owned source of truth for what each product area **does** and **does not**
 ---
 
 ## AutoFix / remediation
-Owner: _TBD (product) — Benji / Mickey Gordon flagged this page_
+Owner: _TBD (product) — Leadership feedback flagged this page_
 
 **Does:**
 - `SHIPPED` One-click AI-generated fix PRs for SAST, IaC, SCA, and container issues.
@@ -29,7 +29,7 @@ Owner: _TBD (product) — Benji / Mickey Gordon flagged this page_
 ---
 
 ## SCA (open-source dependency scanning)
-Owner: _TBD (Nicolai Brogaard cited as SAST/SCA service owner in messaging)_
+Owner: _TBD (SAST/SCA service owner cited in messaging)_
 
 **Does:**
 - `SHIPPED` Scans open-source dependencies for CVEs, malware, license issues, EOL.
@@ -116,7 +116,7 @@ Owner: _TBD_
 ## CodeRabbit
 Comparison page: /comparison/aikido-vs-coderabbit · Last verified: _TBD (needs a pass against coderabbit.ai)_
 
-**CEO-asserted flat wins (Aikido does, CodeRabbit does NOT) — VERIFY each against CodeRabbit's site before publishing:**
+**Executive feedback flat wins (Aikido does, CodeRabbit does NOT) — VERIFY each against CodeRabbit's site before publishing:**
 - Malware protection — _UNVERIFIED_
 - CVE detection — _UNVERIFIED_
 - Container image scanning — _UNVERIFIED_
@@ -125,9 +125,9 @@ Comparison page: /comparison/aikido-vs-coderabbit · Last verified: _TBD (needs 
 - CVE exploitability analysis — _UNVERIFIED_
 - Local security scanning without sharing code — _UNVERIFIED_
 
-(Source: CEO Slack, 2026-08-13. These are the capabilities the CEO wants the comparison table built around. They are asserted, not yet verified against CodeRabbit's documentation — do not publish a "CodeRabbit doesn't do this" mark until each is confirmed.)
+(Source: Executive leadership Slack, 2026-08-13. These are the capabilities executive leadership wants the comparison table built around. They are asserted, not yet verified against CodeRabbit's documentation — do not publish a "CodeRabbit doesn't do this" mark until each is confirmed.)
 
-**Scope guidance from CEO:**
+**Scope guidance from leadership:**
 - Do NOT feature "hardened libraries" on the CodeRabbit comparison (too niche for that audience — interpretation unconfirmed, see corrections-ledger `coderabbit-hardened-libraries-scope`).
 
 ---
