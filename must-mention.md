@@ -39,13 +39,13 @@ Source: capability ledger (Libraries designated core) + corrections `autofix-mis
 - `AVOID` "data-backed fixes" or any "backed by data" phrasing with no named data or mechanism.
 
 ## /comparison/aikido-vs-coderabbit
-Source: corrections `coderabbit-*` (CEO, 2026-08-13)
+Source: corrections `coderabbit-*` (Executive feedback, 2026-08-13)
 
 - `CORE` **Platform vs point tool**: the argument that Aikido covers whole categories CodeRabbit
   does not, rather than that Aikido is CodeRabbit with extras.
 - `CORE` **A tagline that does not concede the category frame.** Leading with a variant of "AI code
   review that goes beyond code quality" positions Aikido as CodeRabbit-plus and is a high-severity
-  positioning finding. The replacement should center developer experience. Owner: Madeline.
+  positioning finding. The replacement should center developer experience. Owner: Marketing leadership.
 - `EXPECTED` **Pricing comparison** present, after the tagline and the platform argument.
 - `AVOID` **Hardened libraries.** Real capability, too niche for this audience, wrong page
   (confirmed 2026-08-14). Valid on other pages.

@@ -18,7 +18,7 @@
     {
       "id": "autofix-fabricated-package-claim",
       "page": "https://www.aikido.dev/code/autofix",
-      "source": "CEO (willem) via Slack thread",
+      "source": "Executive leadership via Slack thread",
       "date": "2026-08-10",
       "axis": "correctness",
       "issue": "'Seamlessly adding a package to your project? We got you covered' describes a capability Aikido does not have.",
@@ -30,7 +30,7 @@
     {
       "id": "autofix-data-backed-jargon",
       "page": "https://www.aikido.dev/code/autofix",
-      "source": "CEO (willem) via Slack thread",
+      "source": "Executive leadership via Slack thread",
       "date": "2026-08-10",
       "axis": "tone",
       "issue": "'Instant data-backed fixes' — meaningless jargon, no clear mechanism referent ('=> that's nonsense').",
@@ -42,7 +42,7 @@
     {
       "id": "autofix-missing-libraries",
       "page": "https://www.aikido.dev/code/autofix",
-      "source": "CEO (willem) via Slack thread + content brief",
+      "source": "Executive leadership via Slack thread + content brief",
       "date": "2026-08-10",
       "axis": "positioning",
       "issue": "Page does not mention Aikido Libraries at all ('it doesn't even have the word libraries in it'); missing the designated core differentiator for CVE autofix.",
@@ -54,7 +54,7 @@
     {
       "id": "autofix-page-off-topic-and-assets",
       "page": "https://www.aikido.dev/code/autofix",
-      "source": "CEO (willem) via Slack thread",
+      "source": "Executive leadership via Slack thread",
       "date": "2026-08-10",
       "axis": "assets",
       "issue": "Page drifts into unrelated content (SBOM Export screenshot mid-flow) and uses pixelated/low-res product screenshots.",
@@ -66,11 +66,11 @@
     {
       "id": "coderabbit-tagline-positioning",
       "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
-      "source": "CEO (willem) via Slack thread",
+      "source": "Executive leadership via Slack thread",
       "date": "2026-08-13",
       "axis": "positioning",
       "issue": "H1 'AI code review that goes beyond code quality' concedes the category frame to CodeRabbit (positions Aikido as CodeRabbit-plus).",
-      "expected": "New tagline centered on developer experience. CEO's suggestion: 'Code review that doesn't make you chase down rabbit holes' (plays on CodeRabbit's name). Owner: Madeline.",
+      "expected": "New tagline centered on developer experience. Executive suggestion: 'Code review that doesn't make you chase down rabbit holes' (plays on CodeRabbit's name). Owner: Marketing leadership.",
       "severity": "high",
       "resolved": false,
       "resolved_date": null
@@ -78,7 +78,7 @@
     {
       "id": "coderabbit-page-structure",
       "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
-      "source": "CEO (willem) via Slack thread",
+      "source": "Executive leadership via Slack thread",
       "date": "2026-08-13",
       "axis": "positioning",
       "issue": "Page emphasis/order is wrong.",
@@ -90,10 +90,10 @@
     {
       "id": "coderabbit-table-false-competitor-claims",
       "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
-      "source": "CEO (willem) via Slack thread",
+      "source": "Executive leadership via Slack thread",
       "date": "2026-08-13",
       "axis": "correctness",
-      "issue": "Comparison table 'features picked are very bad' — CEO wants the table to feature capabilities where CodeRabbit genuinely has nothing, and warns some current framing may misrepresent competitor. Must verify each competitor row against CodeRabbit's actual capabilities.",
+      "issue": "Comparison table 'features picked are very bad' — executive leadership wants the table to feature capabilities where CodeRabbit genuinely has nothing, and warns some current framing may misrepresent competitor. Must verify each competitor row against CodeRabbit's actual capabilities.",
       "expected": "Feature the flat-win capabilities: malware protection, CVE detection, container image scanning, CSPM, pentesting, CVE exploitability analysis, local scanning without sharing code. Verify each 'CodeRabbit does not' mark before publishing.",
       "severity": "high",
       "resolved": false,
@@ -102,7 +102,7 @@
     {
       "id": "coderabbit-hardened-libraries-scope",
       "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
-      "source": "CEO (willem) via Slack thread",
+      "source": "Executive leadership via Slack thread",
       "date": "2026-08-13",
       "axis": "positioning",
       "issue": "'Hardened libraries: totally not the comparison page to bring that up.' Confirmed (2026-08-14): means hardened libraries is too niche for CodeRabbit's audience for this table — the capability is real, just wrong context here.",
@@ -114,7 +114,7 @@
     {
       "id": "coderabbit-wrong-screenshot",
       "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
-      "source": "CEO (willem) via Slack thread",
+      "source": "Executive leadership via Slack thread",
       "date": "2026-08-13",
       "axis": "assets",
       "issue": "Product screenshot shows the Code Quality view; wrong for a page selling Deep PR Review / AI Code Analysis against CodeRabbit.",
@@ -126,11 +126,11 @@
     {
       "id": "coderabbit-table-visual-contrast",
       "page": "https://www.aikido.dev/comparison/aikido-vs-coderabbit",
-      "source": "CEO (willem) via Slack thread",
+      "source": "Executive leadership via Slack thread",
       "date": "2026-08-13",
       "axis": "assets",
       "issue": "PROBLEM (not solution): the comparison table's contrast is too weak — subtle checks and grey crosses don't let a reader see the capability gap at a glance.",
-      "expected": "Increase visual contrast between Aikido's coverage and the competitor's gaps so the difference reads instantly. Solution is a DESIGNER's call. NOTE: the CEO suggested literal red/green, but he's a developer, not a designer — red/green would look poor on this page and clash with the brand. Capture the problem, leave the fix to design.",
+      "expected": "Increase visual contrast between Aikido's coverage and the competitor's gaps so the difference reads instantly. Solution is a DESIGNER's call. NOTE: executive feedback suggested literal red/green, but this came from a developer perspective, not a design perspective — red/green would look poor on this page and clash with the brand. Capture the problem, leave the fix to design.",
       "severity": "low",
       "resolved": false,
       "resolved_date": null
